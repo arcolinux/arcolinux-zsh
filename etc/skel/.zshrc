@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/erik/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -89,14 +89,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+####   ARCOLINUX SETTINGS   ####
+
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -185,7 +180,8 @@ alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 #copy bashrc-latest over on bashrc - cb= copy bashrc
 #alias cb='sudo cp /etc/skel/.bashrc-latest /etc/skel/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc-latest && source ~/.bashrc'
-alias cb='sudo cp /etc/skel/.bashrc-latest /etc/skel/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc-latest && source ~/.zshrc'
+#needs testing
+#alias cb='sudo cp /etc/skel/.bashrc-latest /etc/skel/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc && cp /etc/skel/.bashrc-latest ~/.bashrc-latest && source ~/.zshrc'
 
 #quickly kill conkies
 alias kc='killall conky'
@@ -286,7 +282,7 @@ ex ()
   fi
 }
 
-#create a file called .bashrc-personal and put all your personal aliases
+#create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
