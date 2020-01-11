@@ -184,8 +184,8 @@ alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 alias cz='sudo cp /etc/skel/.zshrc ~/.zshrc && source ~/.zshrc'
 
 #switch between bash and zsh
-alias tobash="sudo chsh $USER -s /bin/bash"
-alias tozsh="sudo chsh $USER -s /bin/zsh"
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 #quickly kill conkies
 alias kc='killall conky'
