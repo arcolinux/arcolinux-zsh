@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash  
 #
 ##################################################################################################################
 # Written to be used on 64 bits computers
@@ -61,11 +61,12 @@ fi
 #https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
 
 git init
+git config --global pull.rebase false
 git config --global user.name "Erik Dubois"
 git config --global user.email "erik.dubois@gmail.com"
 sudo git config --system core.editor nano
 git config --global credential.helper cache
-git config --global credential.helper 'cache --timeout=18000'
+git config --global credential.helper 'cache --timeout=25000'
 git config --global push.default simple
 
 
