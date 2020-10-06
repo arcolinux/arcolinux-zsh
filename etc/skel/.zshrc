@@ -263,6 +263,13 @@ alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
+#maintenance
+alias big="expac -H M '%m\t%n' | sort -h | nl"
+alias downgrada="downgrade --ala-url 'https://bike.seedhost.eu/arcolinux/'"
+
+#systeminfo
+alias probe="sudo -E hw-probe -all -upload"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
