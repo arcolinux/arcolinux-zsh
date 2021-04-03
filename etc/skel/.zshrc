@@ -270,6 +270,9 @@ alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
 alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
 alias nsddm="sudo nano /etc/sddm.conf"
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+alias nfstab="sudo nano /etc/fstab"
+alias nnsswitch="sudo nano /etc/nsswitch.conf"
+alias nsamba="sudo nano /etc/samba/smb.conf"
 
 #gpg
 #verify signature for isos
