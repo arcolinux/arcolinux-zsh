@@ -108,6 +108,11 @@ setopt GLOB_DOTS
 
 export HISTCONTROL=ignoreboth:erasedups
 
+# Make nano the default editor
+
+export EDITOR='nano'
+export VISUAL='nano'
+
 #PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
@@ -128,10 +133,10 @@ alias l.="ls -A | egrep '^\.'"
 #fix obvious typo's
 alias cd..='cd ..'
 alias pdw="pwd"
-alias udpate='sudo pacman -Syu'
-alias upate='sudo pacman -Syu'
-alias updte='sudo pacman -Syu'
-alias updqte='sudo pacman -Syu'
+alias udpate='sudo pacman -Syyu'
+alias upate='sudo pacman -Syyu'
+alias updte='sudo pacman -Syyu'
+alias updqte='sudo pacman -Syyu'
 alias upqll="yay -Syu --noconfirm"
 alias upal="yay -Syu --noconfirm"
 
@@ -168,11 +173,12 @@ alias merge="xrdb -merge ~/.Xresources"
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syu'
+alias update='sudo pacman -Syyu'
 
 # yay as aur helper - updates everything
 alias pksyua="yay -Syu --noconfirm"
 alias upall="yay -Syu --noconfirm"
+alias paru="paru --skipreview"
 
 #ps
 alias psa="ps auxf"
@@ -199,7 +205,7 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 #switch between lightdm and sddm
-alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
+alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
 alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
 
 #quickly kill conkies
@@ -257,22 +263,24 @@ alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
+#search content with ripgrep
+alias rg="rg --sort path"
+
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
 #nano for important configuration files
 #know what you do in these files
-alias nlightdm="sudo nano /etc/lightdm/lightdm.conf"
-alias npacman="sudo nano /etc/pacman.conf"
-alias ngrub="sudo nano /etc/default/grub"
-alias nconfgrub="sudo nano /boot/grub/grub.cfg"
-alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
-alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
-alias nsddm="sudo nano /etc/sddm.conf"
-alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
-alias nfstab="sudo nano /etc/fstab"
-alias nnsswitch="sudo nano /etc/nsswitch.conf"
-alias nsamba="sudo nano /etc/samba/smb.conf"
+alias nlightdm="sudo $EDITOR /etc/lightdm/lightdm.conf"
+alias npacman="sudo $EDITOR /etc/pacman.conf"
+alias ngrub="sudo $EDITOR /etc/default/grub"
+alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
+alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
+alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
+alias nsddm="sudo $EDITOR /etc/sddm.conf"
+alias nfstab="sudo $EDITOR /etc/fstab"
+alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
+alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
 
 #gpg
 #verify signature for isos
@@ -294,6 +302,9 @@ alias probe="sudo -E hw-probe -all -upload"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
+#update betterlockscreen images
+alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
@@ -313,7 +324,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;
+      *.tar.zst)   tar xf $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -326,4 +337,18 @@ ex ()
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
+# reporting tools - install when not installed
+# install neofetch
 neofetch
+# install screenfetch
+#screenfetch
+# install ufetch-git
+#ufetch
+# install ufetch-arco-git
+#ufetch-arco
+# install arcolinux-paleofetch-git
+#paleofetch
+# install alsi
+#alsi
+# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
+#hfetch
