@@ -307,6 +307,9 @@ alias sr="sudo reboot"
 #update betterlockscreen images
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
+#give the list of all installed desktops - xsessions desktops
+alias xd="ls /usr/share/xsessions"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
@@ -354,3 +357,5 @@ neofetch
 #alsi
 # install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
 #hfetch
+# install lolcat
+# neofetch | lolcat
