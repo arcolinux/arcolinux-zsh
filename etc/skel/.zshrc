@@ -338,6 +338,9 @@ ex ()
   fi
 }
 
+#remove
+alias rmgitcache="rm -r ~/.cache/git"
+
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
