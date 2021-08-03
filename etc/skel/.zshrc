@@ -279,6 +279,7 @@ alias nsddm="sudo $EDITOR /etc/sddm.conf"
 alias nfstab="sudo $EDITOR /etc/fstab"
 alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
 alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
+alias ngnupgconf="sudo nano /etc/pacman.d/gnupg/gpg.conf"
 alias nb="$EDITOR ~/.bashrc"
 alias nz="$EDITOR ~/.zshrc"
 
