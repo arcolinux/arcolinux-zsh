@@ -176,7 +176,7 @@ alias merge="xrdb -merge ~/.Xresources"
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 
-# yay as aur helper - updates everything
+# paru as aur helper - updates everything
 alias pksyua="paru -Syu --noconfirm"
 alias upall="paru -Syu --noconfirm"
 
@@ -191,7 +191,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-fc='sudo fc-cache -fv'
 
 #copy/paste all content of /etc/skel over to home folder - backup of config created - beware
-alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
+alias skel='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
 #backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
@@ -295,7 +295,7 @@ alias fix-gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 #receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 alias fix-gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-alias fix-key="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/gpg.conf ~/.gnupg/ ; echo 'done'"
+alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/gpg.conf ~/.gnupg/ ; echo 'done'"
 
 #fixes
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
@@ -309,6 +309,7 @@ alias downgrada="sudo downgrade --ala-url https://ant.seedhost.eu/arcolinux/"
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
+alias sysfailed="systemctl list-units --failed"
 
 #shutdown or reboot
 alias ssn="sudo shutdown now"
