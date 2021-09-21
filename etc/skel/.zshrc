@@ -383,6 +383,7 @@ neofetch
 #screenfetch
 #ufetch
 #ufetch-arco
+#pfetch
 #paleofetch
 #alsi
 #hfetch
