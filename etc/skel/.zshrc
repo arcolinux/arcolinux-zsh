@@ -386,6 +386,7 @@ neofetch
 #pfetch
 #paleofetch
 #alsi
+#fetch
 #hfetch
 #sfetch
 #sysinfo
