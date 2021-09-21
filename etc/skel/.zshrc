@@ -381,13 +381,13 @@ alias personal='cp -Rf /personal/* ~'
 # reporting tools - install when not installed
 neofetch
 #screenfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#paleofetch
 #alsi
+#paleofetch
 #fetch
 #hfetch
 #sfetch
+#ufetch
+#ufetch-arco
+#pfetch
 #sysinfo
 #sysinfo-retro
