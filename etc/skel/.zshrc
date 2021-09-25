@@ -392,3 +392,4 @@ neofetch
 #pfetch
 #sysinfo
 #sysinfo-retro
+#cpufetch
