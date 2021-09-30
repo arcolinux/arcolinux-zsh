@@ -397,3 +397,4 @@ neofetch
 #sysinfo
 #sysinfo-retro
 #cpufetch
+#colorscript random
