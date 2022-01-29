@@ -205,8 +205,8 @@ alias skel='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-ba
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 #copy shell configs
-alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc && echo "Copied."'
-alias cz='sudo cp /etc/skel/.zshrc ~/.zshrc && exec zsh'
+alias cb='cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc && echo "Copied."'
+alias cz='cp /etc/skel/.zshrc ~/.zshrc && exec zsh'
 alias cf 'cp /etc/skel/.config/fish/config.fish ~/.config/fish/config.fish && echo "Copied."'
 
 #switch between bash and zsh
