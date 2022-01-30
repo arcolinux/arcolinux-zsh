@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ####   ARCOLINUX SETTINGS   ####
-
+export PAGER='most'
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
