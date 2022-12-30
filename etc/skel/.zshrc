@@ -141,6 +141,12 @@ alias ll='ls -alFh'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 
+#pacman
+alias sps='sudo pacman -S'
+alias spr='sudo pacman -R'
+alias sprs='sudo pacman -Rs'
+alias sprdd='sudo pacman -Rdd'
+
 #fix obvious typo's
 alias cd..='cd ..'
 alias pdw='pwd'
@@ -299,6 +305,17 @@ alias isoo="cat /etc/dev-rel"
 
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+
+# This will generate a list of explicitly installed packages
+alias list="sudo pacman -Qqe"
+This will generate a list of explicitly installed packages without dependencies
+alias listt="sudo pacman -Qqet"
+# list of AUR packages
+alias listaur="sudo pacman -Qqem"
+# add > list at the end to write to a file
+
+# install packages from list
+# pacman -S --needed - < my-list-of-packages.txt
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
