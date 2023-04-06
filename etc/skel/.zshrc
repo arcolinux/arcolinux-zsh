@@ -210,10 +210,12 @@ alias merge="xrdb -merge ~/.Xresources"
 # pacman
 alias pacman="sudo pacman --color auto"
 alias update="sudo pacman -Syyu"
+alias upd="sudo pacman -Syyu"
 
 # paru as aur helper - updates everything
 alias pksyua="paru -Syu --noconfirm"
 alias upall="paru -Syu --noconfirm"
+alias upa="paru -Syu --noconfirm"
 
 #ps
 alias psa="ps auxf"
