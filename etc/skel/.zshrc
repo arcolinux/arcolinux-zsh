@@ -428,7 +428,7 @@ alias xdw="ls /usr/share/wayland-sessions"
 alias kernels="ls /usr/lib/modules"
 
 #am I on grub or systemd-boot
-alias boot="sudo bootctl status | grep product"
+alias boot="sudo bootctl status | grep Product"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
